@@ -49,6 +49,7 @@ def apply_settings(
     label=None,
     language=None,
     use_passphrase=None,
+    pin_entry_on_device=None,
     homescreen=None,
     passphrase_source=None,
     auto_lock_delay_ms=None,
@@ -58,6 +59,8 @@ def apply_settings(
         settings.label = label
     if language:
         settings.language = language
+    if pin_entry_on_device is not None:
+        settings.pin_entry_on_device = pin_entry_on_device
     if use_passphrase is not None:
         settings.use_passphrase = use_passphrase
     if homescreen is not None:

@@ -233,6 +233,10 @@ def get_features(connect):
 def change_pin(connect, remove):
     return device.change_pin(connect(), remove)
 
+@cli.command(help="Enable PIN entry on device.")
+@click.pass_obj
+def enable_pin_entry_on_device(connect):
+    return device.apply_settings(connect(), pin_entry_on_device=True)
 
 @cli.command(help="Enable passphrase.")
 @click.pass_obj
